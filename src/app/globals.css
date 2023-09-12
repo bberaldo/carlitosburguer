@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+section {
+	@apply py-10 md:py-20 lg:px-20 px-5;
+}
+
+.container {
+	@apply mx-auto;
+}
+
+.row {
+	@apply max-w-7xl mx-auto;
+}
+
+
+@font-face {
+	font-family: 'Freestyle Script';
+	src: url('../../public/font/FreestyleScript-Regular.woff2') format('woff2'),
+			url('../../public/font/FreestyleScript-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Sphere Sans';
+	src: url('../../public/font/SphereSansRegular.woff2') format('woff2'),
+			url('../../public/font/SphereSansRegular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Sphere Sans';
+	src: url('../../public/font/SphereSansRegular.woff2') format('woff2'),
+			url('../../public/font/SphereSansRegular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+
