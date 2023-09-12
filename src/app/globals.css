@@ -42,5 +42,15 @@ section {
 	font-display: swap;
 }
 
+@font-face {
+	font-family: 'HANDYMAN';
+	src: url('../../public/font/HANDYMAN-Normal.woff2') format('woff2'),
+			url('../../public/font/HANDYMAN-Normal.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+
 
 

@@ -5,10 +5,15 @@ export default function Home() {
     <div className="bg-brand-200 min-h-screen">
       <section>
         <div className="row">
-          <div className="container">
-            <h1 className="uppercase tracking-widest text-center font-bold font-sphere text-xl text-brand-100">
-              FAÇA SEU PEDIDO!
-            </h1>
+          <div className="container ">
+            <div className="relative w-fit mx-auto">
+              <h1 className="uppercase relative tracking-widest text-center font-bold font-sphere text-xl text-brand-100">
+                FAÇA SEU PEDIDO!
+              </h1>
+              <span className="font-bold absolute bottom-0 left-9 font-sphere text-xl text-brand-100">
+                ,
+              </span>
+            </div>
           </div>
         </div>
       </section>

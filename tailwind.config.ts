@@ -23,7 +23,7 @@ const config: Config = {
       },
       fontFamily: {
         'freestyle' : 'Freestyle Script',
-        'sphere': 'Sphere Sans'
+        'sphere': 'Sphere Sans',
       }
     },
   },

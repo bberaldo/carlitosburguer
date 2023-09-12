@@ -72,6 +72,15 @@ export default function Carrinho() {
                 </div>
               </>
             )}
+
+            <div className="mt-5 flex place-content-center">
+              <a
+                href="/"
+                className="w-fit px-3 py-1 pb-1.5 rounded-full bg-brand-200 text-brand-100 uppercase font-sphere"
+              >
+                comprar mais
+              </a>
+            </div>
           </div>
         </div>
       </section>

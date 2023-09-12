@@ -139,10 +139,13 @@ export default function Product() {
                       <div className="max-w-[2rem]">
                         <img src="/img/carlitos-amarelo.png" alt="" />
                       </div>
-                      <div className="flex items-center">
-                        <h2 className="text-brand-100  sm:text-lg tracking-wider uppercase">
+                      <div className="flex items-center relative">
+                        <h2 className="text-brand-100 relative uppercase">
                           Adicionais (Escolha até 3 opções)*
                         </h2>
+                        <span className="absolute bottom-1 left-[17.8rem] font-sphere text-sm tracking-wider text-brand-100">
+                          ,
+                        </span>
                       </div>
                     </div>
                   </div>
