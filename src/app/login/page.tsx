@@ -11,7 +11,7 @@ export default function Login() {
       <section className="">
         <div className="row">
           <div className="container">
-            <div className="max-w-lg px-8 py-16 mx-auto bg-brand-400 shadow-xl rounded-lg">
+            <div className="max-w-lg px-3 sm:px-8 py-8 sm:py-16 mx-auto bg-brand-400 shadow-xl rounded-lg">
               <div className="text-brand-200 text-7xl flex place-content-center">
                 <FaUserCircle />
               </div>

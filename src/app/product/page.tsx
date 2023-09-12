@@ -6,6 +6,13 @@ import { HiPlusSm } from "react-icons/hi";
 
 export default function Product() {
   let [isOpen, setIsOpen] = useState(false);
+  let [pedido, setPedido] = useState(false);
+  let [quantidade, setQuantidade] = useState(0);
+
+  function openPedido() {
+    setPedido(true);
+    setIsOpen(false);
+  }
 
   function closeModal() {
     setIsOpen(false);
@@ -36,7 +43,7 @@ export default function Product() {
                   </div>
                 </div>
                 <p className="text-brand-400 font-medium tracking-wide leading-relaxed mt-7 text-justify">
-                  Pão brioche selado na manteiga, 1 hamburger de 180grs
+                  Pão brioche selado na manteiga, 1 hamburguer de 180grs
                   artesanal, queijo gouda derretido no maçarico, anéis de cebola
                   enrolados no bacon, alface, tomate, cebolinha fresca, molho
                   barbecue e maionese temperada. (acompanha batata frita)
@@ -190,16 +197,119 @@ export default function Product() {
                         <h3 className="text-brand-200 uppercase">
                           Cebola Crispy
                         </h3>
-                        <div className="rounded-full bg-brand-200 p-1 text-lg text-brand-100 flex place-content-center items-center">
+                        <button className="rounded-full bg-brand-200 p-1 text-lg text-brand-100 flex place-content-center items-center">
                           <HiPlusSm />
-                        </div>
+                        </button>
                       </li>
                     </ul>
                   </div>
+
+                  <div className="flex flex-col gap-y-2 mt-8">
+                    <div className="bg-brand-200 py-1 flex px-2 gap-2">
+                      <div className="max-w-[2rem]">
+                        <img src="/img/carlitos-amarelo.png" alt="" />
+                      </div>
+                      <div className="flex items-center">
+                        <h2 className="text-brand-100  sm:text-lg tracking-wider uppercase">
+                          Observações
+                        </h2>
+                      </div>
+                    </div>
+
+                    <div className="mt-3">
+                      <textarea
+                        className="bg-brand-200/20 w-full h-20 border border-brand-200 rounded-md p-2 placeholder:text-brand-300/60 outline-none"
+                        placeholder="Favor, tirar ovos e cebola."
+                      />
+                    </div>
+                  </div>
                   <div className="mt-5 flex place-content-center">
-                    <button className="w-fit px-3 py-1 pb-1.5 rounded-full bg-brand-300 text-brand-100 uppercase font-sphere">
+                    <button
+                      onClick={openPedido}
+                      className="w-fit px-3 py-1 pb-1.5 rounded-full bg-brand-300 text-brand-100 uppercase font-sphere"
+                    >
                       Adicionar ao Pedido
                     </button>
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+
+      <Transition appear show={pedido} as={Fragment}>
+        <Dialog
+          as="div"
+          className="relative z-10"
+          onClose={() => setPedido(false)}
+        >
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-full max-w-xs transform overflow-hidden bg-brand-400 border-4 border-brand-200 p-6 text-left align-middle shadow-xl transition-all relative font-sphere rounded-xl">
+                  <div className="flex flex-col gap-y-5 justify-center">
+                    <div className="max-w-[8rem] mx-auto">
+                      <img src="/img/carlitos-amarelo.png" alt="" />
+                    </div>
+                    <div>
+                      <h2 className="text-brand-200/80 text-lg text-center">
+                        ONION BURGUER
+                      </h2>
+                      <h2 className="text-brand-200/80 text-lg text-center">
+                        ADICIONADO AO CARRINHO!
+                      </h2>
+                    </div>
+
+                    {/* <div className="bg-brand-100/80 py-1 px-2 flex place-content-between">
+                      <div className="flex items-center">
+                        <p className="uppercase text-brand-200">Quantidade</p>
+                      </div>
+                      <div className="text-brand-200 flex items-center gap-x-1">
+                        <span>{quantidade}</span>
+                        <button
+                          onClick={() => setQuantidade(quantidade + 1)}
+                          className="p-1 text-lg bg-brand-200 text-brand-100 rounded-full"
+                        >
+                          <HiPlusSm />
+                        </button>
+                      </div>
+                    </div> */}
+
+                    <div className="mt-3 flex flex-col gap-y-1.5 place-content-center">
+                      <a
+                        href="/"
+                        className="uppercase px-3 py-2 text-brand-100 bg-brand-200 w-full text-center"
+                      >
+                        continuar comprando
+                      </a>
+                      <a
+                        href="/carrinho"
+                        className="uppercase px-3 py-2 text-brand-100 bg-brand-200 w-full text-center"
+                      >
+                        ir para o carrinho
+                      </a>
+                    </div>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

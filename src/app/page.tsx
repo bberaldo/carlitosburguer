@@ -29,23 +29,23 @@ export default function Home() {
                     <p className="text-center">ONION BURGUER</p>
                   </div>
                 </div>
-                <img src="/img/lanche.png" className="relative" alt="" />
+                <img src="/img/lanche1.jpeg" className="relative" alt="" />
               </a>
               <a href="/product" className="relative">
                 <div className="absolute w-full h-full inset-0 flex items-end justify-center z-10">
                   <div className="w-fit px-3 py-1 rounded-full text-brand-100 bg-brand-200 shadow-md mb-3">
-                    <p className="text-center">ONION BURGUER</p>
+                    <p className="text-center">MINEIRINHO</p>
                   </div>
                 </div>
-                <img src="/img/lanche.png" className="relative" alt="" />
+                <img src="/img/lanche2.jpeg" className="relative" alt="" />
               </a>
               <a href="/product" className="relative">
                 <div className="absolute w-full h-full inset-0 flex items-end justify-center z-10">
                   <div className="w-fit px-3 py-1 rounded-full text-brand-100 bg-brand-200 shadow-md mb-3">
-                    <p className="text-center">ONION BURGUER</p>
+                    <p className="text-center">DOCTOR BURGUER</p>
                   </div>
                 </div>
-                <img src="/img/lanche.png" className="relative" alt="" />
+                <img src="/img/lanche3.jpeg" className="relative" alt="" />
               </a>
             </div>
           </div>
